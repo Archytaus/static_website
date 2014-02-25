@@ -13,38 +13,40 @@
     <meta name="keywords" content="Ryan Scott, Rails, Ruby, Ruby on Rails, JavaScript, Melbourne, Programming, Games, Games Programming, Web Programming, Web Development">
     <meta name="description" content="Ryan Scott - I'm a software developer living in Melbourne Australia. I currently work with Ruby on Rails and JavaScript. In my spare time I love programming games and spending time with my girlfriend.">
     
-    <%= stylesheet_link_tag "normalize", "all" %>
-    <%= javascript_include_tag  "all" %>
+    <%= stylesheet_link_tag "normalize", "foundation", "all" %>
+    <%= javascript_include_tag  "jquery-2.1.0.min", "foundation.min", "all" %>
   </head>
   
   <body class="<%= page_classes %>">
-    <header class="box square charcoal">
-      <div class="container">
-        <div class="row">
-          <div class="one half">
-            <h2 class="logo">
-              <a href="/" target="_parent">
-                <img src="http://www.gravatar.com/avatar/639f078c2a48fb3982376307e252948d.png" alt="Ryan Scott" width="64px" height="64px"></img> 
-                Ryan Scott
-              </a>
-            </h2>
-          </div>
-          <div class="one half">
-            <p class="small double triple-pad-top no-pad-small-tablet align-right">
-              <a href="https://github.com/Archytaus" class="noicon" target="_blank" title="GitHub">
-                GitHub
-              </a>
-              <br>
-              <a href="http://twitter.com/atthealma" class="noicon" target="_blank" title="Twitter">
-                <i class="icon-twitter"></i>
-                Twitter
-              </a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </header>
-    
+    <nav class="top-bar" data-topbar>
+      <ul class="title-area">
+        <li class="name">
+          <h1 class="logo">
+            <a href="/" target="_parent">
+              <img src="http://www.gravatar.com/avatar/639f078c2a48fb3982376307e252948d.png" alt="Ryan Scott"></img> 
+              Ryan Scott
+            </a>
+          </h1>
+        </li>
+        <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+      </ul>
+      <section class="top-bar-section">
+        <ul class="right">
+          <li>
+            <a href="https://github.com/Archytaus" class="noicon" target="_blank" title="GitHub">
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a href="http://twitter.com/atthealma" class="noicon" target="_blank" title="Twitter">
+              <i class="icon-twitter"></i>
+              Twitter
+            </a>
+          </li>
+        </ul>
+      </section>
+    </nav>
+
     <%= yield %>
 
     <footer class="">
