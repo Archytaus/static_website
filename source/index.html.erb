@@ -1,10 +1,18 @@
 ---
-title: Welcome to Middleman
+title: Ryan Scott - Home
 ---
 
-<div class="welcome">
-  <h1>Middleman is Watching</h1>
-  <p class="doc">
-    <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
-  </p><!-- .doc -->
-</div><!-- .welcome -->
+<div class="container">
+  <div class="pad-top">
+    <ul class="home-nav">
+      <li class="box row post third-post animated fadeInUp">
+        <a class="post-link" href="<%= url_for('/about.html') %>">
+          <div class="padded one half glass">
+            <h2 class="quicksand responsive" data-compression="18">About Me</h2>
+          </div>
+        </a>
+      </li>
+    </ul>
+    
+  </div>
+</div>
