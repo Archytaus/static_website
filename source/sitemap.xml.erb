@@ -8,7 +8,7 @@ directory_index: false
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <% pages.each do |p| %>
   <url>
-    <loc>http://ryan-scott.net/<%=p.destination_path.gsub('/index.html','')%></loc>
+    <loc>http://ryan-scott.me/<%=p.destination_path.gsub('/index.html','')%></loc>
     <priority><%= p.data.sitemap_priority %></priority>
   </url>
 <% end %>
