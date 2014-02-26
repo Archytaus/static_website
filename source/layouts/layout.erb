@@ -17,14 +17,14 @@
     <%= javascript_include_tag  "jquery-2.1.0.min", "foundation.min", "all" %>
   </head>
   
-  <body class="<%= page_classes %>">
+  <body class="<%= page_classes %>" itemscope itemtype="http://data-vocabulary.org/Person">
     <nav class="top-bar" data-topbar>
       <ul class="title-area">
         <li class="name">
           <h1 class="logo">
             <a href="/" target="_parent">
-              <img src="http://www.gravatar.com/avatar/639f078c2a48fb3982376307e252948d.png" alt="Ryan Scott" width="34px" height="34px"></img> 
-              Ryan Scott
+              <img itemprop="image" src="http://www.gravatar.com/avatar/639f078c2a48fb3982376307e252948d.png" alt="Ryan Scott" width="34px" height="34px"></img>
+              <span itemprop="name">Ryan Scott</span>
             </a>
           </h1>
         </li>
@@ -41,7 +41,22 @@
 
     <footer>
       <div class="row">
-        <div class="medium-4 medium-4 push-8 columns">
+        <div class="medium-4 columns">
+          <ul class="layout-about">
+            <li>
+              <p class="about-blurb">
+                I'm a <span itemprop="title">software developer</span> living in <span itemprop="address" itemscope
+                itemtype="http://data-vocabulary.org/Address"><span itemprop="locality">Melbourne</span> <span itemprop="country-name">Australia</span></span>.
+              </p>
+            </li>
+            <li>
+              <p class="about-blurb">
+                I currently work with Ruby on Rails and JavaScript.
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="medium-4 columns">
           <ul class="layout-social">
             <li>
               <a href="http://twitter.com/Archytaus" target="_blank" title="Twitter" style="text-decoration:none;" >
@@ -51,6 +66,11 @@
             <li>
               <a href="http://github.com/Archytaus" target="_blank" title="Github" style="text-decoration:none;">
                 <div class="github-logo"></div>
+              </a>
+            </li>
+            <li>
+              <a href="https://plus.google.com/115667768233505109815?rel=author" data-rel="author" rel="author" target="_blank" title="Google+" style="text-decoration:none;">
+                <img src="//ssl.gstatic.com/images/icons/gplus-32.png" alt="Google+" style="border:0;width:32px;height:32px;"/>
               </a>
             </li>
           </ul>
