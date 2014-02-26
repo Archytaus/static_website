@@ -46,9 +46,7 @@
 # end
 
 set :css_dir, 'stylesheets'
-
 set :js_dir, 'javascripts'
-
 set :images_dir, 'images'
 
 # Build-specific configuration
@@ -58,13 +56,12 @@ configure :build do
 
   # Minify Javascript on build
   activate :minify_javascript
+
+  # Enable cache buster
   activate :asset_hash
   
   # GZip files
   activate :gzip
-
-  # Enable cache buster
-  # activate :asset_hash
 
   # Use relative URLs
   activate :relative_assets
