@@ -83,3 +83,10 @@ activate :s3_sync do |s3_sync|
   s3_sync.acl                        = 'public-read'
   s3_sync.encryption                 = false
 end
+
+activate :cloudfront do |cf|
+  # cf.access_key_id = 'AWS KEY ID'
+  # cf.secret_access_key = 'AWS SECRET KEY'
+  # cf.distribution_id = 'CLOUDFRONT DISTRIBUTION ID'
+  cf.filter = /\.html$/i  # default is /.*/
+end
